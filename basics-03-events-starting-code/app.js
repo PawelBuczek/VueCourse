@@ -5,6 +5,12 @@ const app = Vue.createApp({
       name: ''
     };
   },
+  computed: {
+    fullname() {
+      console.log('recalculating fullname');
+      return this.name === '' ? '' : this.name + ' ' + 'Smith';
+    }
+  },
   methods: {
     add(num) {
       this.counter = this.counter + num;
