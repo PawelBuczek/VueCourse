@@ -11,6 +11,17 @@ const app = Vue.createApp({
       return this.name === '' ? '' : this.name + ' ' + 'Smith';
     }
   },
+  // is useful for sending http requests when some condition is met
+  watch: {
+    counter(value) {
+      if (value > 50) {
+        const that = this;
+        setTimeout(function () {
+          that.counter = 0;
+        }, 2000);
+      }
+    }
+  },
   methods: {
     add(num) {
       this.counter = this.counter + num;
