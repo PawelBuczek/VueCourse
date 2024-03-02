@@ -28,11 +28,8 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        addFive() {
-            this.myValue++;
-        },
-        addOne() {
-            this.myValue = this.myValue + 5;
+        add(num) {
+            this.myValue = this.myValue + num;
         }
     }
 });
