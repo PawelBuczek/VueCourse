@@ -7,10 +7,10 @@ const app = Vue.createApp({
     computed: {
         myResult() {
             console.log('recalculating myResult');
-            if (myValue < 37) {
+            if (this.myValue < 37) {
                 return "not yet";
             }
-            else if (myValue == 37) {
+            else if (this.myValue == 37) {
                 return "";
             } else {
                 return "too much"
@@ -19,7 +19,7 @@ const app = Vue.createApp({
     },
     watch: {
         counter(myResult) {
-            if (myValue >= 37) {
+            if (this.myValue >= 37) {
                 const that = this;
                 setTimeout(function () {
                     that.myResult = '';
