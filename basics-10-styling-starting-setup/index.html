@@ -17,7 +17,10 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
-      <div :class="isDivClicked ? 'demo active' : 'demo'" @click="toggleDiv()"></div>
+      <div 
+      class="demo"
+      :class="{active: isDivClicked}" 
+      @click="toggleDiv()"></div>
     </section>
   </body>
 </html>
