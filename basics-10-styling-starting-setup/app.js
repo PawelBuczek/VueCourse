@@ -5,7 +5,7 @@ const app = Vue.createApp({
         };
     },
     methods: {
-        switch() {
+        toggleDiv() {
             this.isDivClicked = !this.isDivClicked;
         },
     }
