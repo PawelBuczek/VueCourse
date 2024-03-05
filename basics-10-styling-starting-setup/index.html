@@ -17,7 +17,7 @@
       <h1>Vue Dynamic Styling</h1>
     </header>
     <section id="styling">
-      <div class="demo" :style="{borderColor: isDivClicked ? 'red' :'#ccc'}" @click="toggleDiv()"></div>
+      <div :class="isDivClicked ? 'demo active' : 'demo'" @click="toggleDiv()"></div>
     </section>
   </body>
 </html>
