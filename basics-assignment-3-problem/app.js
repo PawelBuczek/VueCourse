@@ -6,25 +6,24 @@ const app = Vue.createApp({
     },
     computed: {
         myResult() {
-            console.log('recalculating myResult');
+            console.log('recalculating myResult. myValue=' + this.myValue);
             if (this.myValue < 37) {
                 return "not yet";
             }
             else if (this.myValue == 37) {
-                return "";
+                return "OK";
             } else {
                 return "too much"
             }
         }
     },
     watch: {
-        counter(myResult) {
-            if (this.myValue >= 37) {
-                const that = this;
-                setTimeout(function () {
-                    that.myResult = '';
-                }, 5000);
-            }
+        myResult() {
+            console.log('watcher for myResult. myResult=' + this.myResult + "  |  myValue=" + this.myValue);
+            const that = this;
+            setTimeout(function () {
+                that.myValue = 0;
+            }, 3000);
         }
     },
     methods: {
