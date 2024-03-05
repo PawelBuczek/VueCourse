@@ -13,7 +13,7 @@ const app = Vue.createApp({
             else if (this.myValue == 37) {
                 return "OK";
             } else {
-                return "too much"
+                return "too much";
             }
         }
     },
